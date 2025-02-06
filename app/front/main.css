@@ -1,0 +1,49 @@
+:root { /* :rootセレクターは、HTMLページの<html>を表す*/
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+/*ul { ulセレクターは、対応するHTMLページの<ul>の中身だけを対象とする
+    font-family: helvetica;
+}*/ li {
+    list-style: circle;
+}
+
+.list { /*.list は "クラス セレクター" のこと。HTMLページ内の class = "list が付く要素を対象とする*/
+    list-style: square;
+}
+/*#msg { #msg は "ID セレクター" のこと。HTMLページ内の id = "msg" が付く要素を対象とする
+    font-family: monospace;
+}*/
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
